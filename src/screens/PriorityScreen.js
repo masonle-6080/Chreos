@@ -18,6 +18,20 @@ export const PriorityScreen = ({ priorityItems, friendsItems, onToggleItem }) =>
       {/* Monthly spending summary card at the top */}
       <View style={globalStyles.summaryCard}>
         <Text style={globalStyles.summaryTitle}>This Month's Total: $247.85</Text>
+
+        <View style={globalStyles.SummaryRow}>
+          <View style={globalStyles.SummaryItem}>
+            <Text style={globalStyles.SummaryItemText}>You're owed: </Text>
+            <Text style={globalStyles.SummaryItemText}>AMOUNT</Text>
+          </View>
+          <View syle={globalStyles.SummaryItem}>
+            <Text style={globalStyles.SummaryItemText}>You owe: </Text>
+            <Text style={globalStyles.SummaryItemText}>AMOUNT</Text>
+          </View>
+        </View>
+          
+
+        
       </View>
 
       {/* Priority items section - user's high-priority grocery items */}
@@ -34,7 +48,7 @@ export const PriorityScreen = ({ priorityItems, friendsItems, onToggleItem }) =>
 
       {/* Friends section - items requested by friends */}
       <View style={globalStyles.section}>
-        <Text style={globalStyles.sectionTitle}>Friends</Text>
+        <Text style={globalStyles.sectionTitle}>Friend's Items</Text>
         {friendsItems.map((item) => (
           <ListItem
             key={item.id}

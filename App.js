@@ -5,9 +5,10 @@ import {
   View,
   Text,
   TouchableOpacity,
-  SafeAreaView,
   Alert,
 } from "react-native";
+
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 // Import Expo status bar component
 import { StatusBar } from 'expo-status-bar';
 
@@ -36,7 +37,7 @@ import { globalStyles } from './src/styles/styles';
  * Main grocery shopping app component that manages navigation between different screens
  * and handles modal states for adding items and friends
  */
-export default function GroceryApp() {
+function GroceryApp() {
   // State to track which bottom navigation tab is currently active
   const [activeBottomTab, setActiveBottomTab] = useState("Priority");
 
@@ -167,13 +168,13 @@ export default function GroceryApp() {
 
   // Main app render function
   return (
-    <SafeAreaView style={globalStyles.container}>
+    <SafeAreaView style={globalStyles.container} edges={['top', 'bottom', 'left', 'right']}>
       {/* Status bar with dark theme (systems time, wifi, and battery at the top */}
       <StatusBar style="dark" />
 
       {/* App header with title and add friends button */}
       <View style={globalStyles.header}>
-        <Text style={globalStyles.headerTitle}>Shopping</Text>
+        <Text style={globalStyles.headerTitle}>Chreos</Text>
         <TouchableOpacity
           onPress={() => setShowAddFriendsModal(true)}
           accessibilityLabel="Add friends"
@@ -218,4 +219,12 @@ export default function GroceryApp() {
       />
     </SafeAreaView>
   );
+}
+
+export default function App(){
+    return (
+      <SafeAreaProvider>
+        <GroceryApp/>
+      </SafeAreaProvider>
+    )
 }

@@ -7,6 +7,8 @@ import { globalStyles } from '../styles/styles';
 
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 
 /**
@@ -31,18 +33,16 @@ export const UsersIcon = ({ style }) => (
 
 // Bar chart icon for statistics/analytics
 export const BarChartIcon = ({ style }) => (
-  <Text style={[globalStyles.icon, style]}>📊</Text>
+  <Ionicons name="stats-chart-sharp" size={24} color="grey" />
 );
 
 // Settings icon for app configuration
 export const SettingsIcon = ({ style }) => (
-  <Text style={[globalStyles.icon, style]}>⚙️</Text>
-);
+  <Ionicons name="settings-sharp" size={24} color="grey" />);
 
 // Credit card icon for financial/debt tracking
 export const CreditCardIcon = ({ style }) => (
-  <Text style={[globalStyles.icon, style]}>💳</Text>
-);
+  <MaterialIcons name="attach-money" size={24} color="grey" />);
 
 // Close/dismiss icon for modals and overlays
 export const CloseIcon = ({ style }) => (

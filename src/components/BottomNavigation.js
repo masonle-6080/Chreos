@@ -8,7 +8,7 @@ import { globalStyles } from '../styles/styles';
 
 // Configuration array defining the bottom navigation tabs
 const tabs = [
-  { name: "Priority", icon: PriorityIcon }, // Priority items and shopping lists
+  { name: "Lists", icon: PriorityIcon }, // Priority items and shopping lists
   { name: "Stats", icon: BarChartIcon }, // Shopping statistics and analytics
   { name: "Debts", icon: CreditCardIcon }, // Shared expenses and debt tracking
   { name: "Settings", icon: SettingsIcon }, // App settings and configuration

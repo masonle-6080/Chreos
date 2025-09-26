@@ -24,7 +24,7 @@ export const colors = {
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
   
   // Header styles
@@ -54,7 +54,8 @@ export const globalStyles = StyleSheet.create({
   summaryCard: {
     backgroundColor: colors.primary,
     borderRadius: 16,
-    padding: 24,
+    paddingVertical: 24,
+    paddingHorizontal: 30,
     marginBottom: 24,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
@@ -63,6 +64,22 @@ export const globalStyles = StyleSheet.create({
     elevation: 4,
   },
   summaryTitle: {
+    fontSize: 30,
+    fontWeight: "600",
+    color: colors.white,
+    marginBottom: 8,
+  },
+
+  SummaryRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+
+  SummaryItem: {
+    flex: 1
+  },
+  
+  SummaryItemText: {
     fontSize: 18,
     fontWeight: "600",
     color: colors.white,
